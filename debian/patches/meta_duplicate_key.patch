@@ -1,0 +1,27 @@
+Description: merge the two no_index keys
+ This avoids:
+ CPAN::Meta::YAML found a duplicate key 'no_index' in line '' at /usr/share/perl/5.24/CPAN/Meta/YAML.pm line 515.
+ in perl 5.24
+Origin: vendor
+Author: gregor herrmann <gregoa@debian.org>
+Last-Update: 2016-10-01
+Forwarded: https://rt.cpan.org/Ticket/Display.html?id=118211
+Bug: https://rt.cpan.org/Ticket/Display.html?id=118211
+
+--- a/META.yml
++++ b/META.yml
+@@ -15,11 +15,10 @@
+     directory:
+         - t
+         - inc
++    package:
++        - Devel::CheckLib
++        - IO::CaptureOutput
+ generated_by:       ExtUtils::MakeMaker version 6.48
+ meta-spec:
+     url:      http://module-build.sourceforge.net/META-spec-v1.4.html
+     version:  1.4
+-no_index:
+-    package:
+-        - Devel::CheckLib
+-        - IO::CaptureOutput

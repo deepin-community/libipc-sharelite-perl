@@ -1,0 +1,24 @@
+Source: libipc-sharelite-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Krzysztof Krzyżaniak (eloy) <eloy@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: perl,
+               debhelper (>= 9),
+               libtest-pod-perl
+Standards-Version: 3.9.8
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-perl/packages/libipc-sharelite-perl.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-perl/packages/libipc-sharelite-perl.git
+Homepage: https://metacpan.org/release/IPC-ShareLite
+
+Package: libipc-sharelite-perl
+Architecture: any
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         ${shlibs:Depends}
+Description: Perl module that provides a simple interface to shared memory
+ IPC::ShareLite provides a simple interface to shared memory, allowing
+ data to be efficiently communicated between processes. Your operating
+ system must support SysV IPC (shared memory and semaphores) in order to
+ use this module.   

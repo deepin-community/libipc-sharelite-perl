@@ -1,0 +1,3 @@
+version=3
+https://metacpan.org/release/IPC-ShareLite \
+	.*/IPC-ShareLite-v?(\d.*)\.tar\.gz
